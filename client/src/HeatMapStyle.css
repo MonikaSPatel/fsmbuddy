@@ -1,0 +1,15 @@
+.container {
+  width: 1100px;
+  text-align: center;
+}
+.yAxis path,
+line {
+  stroke: white;
+}
+.tooltip {
+  background-color: lightgrey;
+  position: absolute;
+  opacity: 0;
+  width: 70px;
+  padding: 5px;
+}

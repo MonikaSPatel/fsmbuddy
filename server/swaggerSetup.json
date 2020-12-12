@@ -1,0 +1,168 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Hello",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3002",
+  "basePath": "",
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "paths": {
+    "/login": {
+      "get": {
+        "tags": ["Test"],
+        "summary": "Test",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": "#/definitions/testUser"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Test"],
+        "summary": "User Login",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User login",
+            "schema": "#/definitions/User"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": "#/definitions/User"
+          },
+          "400": {
+            "description": "Failed Post data"
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": ["Register"],
+        "summary": "New User Register",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "New User create",
+            "schema": "#/definitions/User"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed Post data"
+          }
+        }
+      }
+    },
+    "/reset-password/{token}": {
+      "parameters": [
+        {
+          "name": "token",
+          "in": "path",
+          "required": true,
+          "description": "token of the user we want to match",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": ["resetPassword"],
+        "summary": "Reset User Password with given token",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": "#/definitions/User"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Test",
+      "description": "API for User"
+    },
+    {
+      "name": "Register",
+      "description": "New User Registration"
+    },
+    {
+      "name": "resetPassword",
+      "description": "User Password Reset"
+    }
+  ],
+  "definitions": {
+    "testUser": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "emails": [
+          {
+            "email": {
+              "type": "string"
+            }
+          }
+        ],
+        "mobiles": {
+          "mobile": {
+            "type": "string"
+          }
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirm": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "dob": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

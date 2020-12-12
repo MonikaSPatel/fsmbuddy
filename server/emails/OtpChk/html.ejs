@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Writi</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+</head>
+<body style="font-family: 'Roboto', sans-serif;" marginheight="0">
+
+<!--Header-->
+<%- include ../header/header.ejs %>
+<!-- /Header-->
+
+<!--Body content-->
+<center style="border-spacing: 0; border-collapse: collapse; margin: 0 auto; background-color: #f0f0f0">
+    <div class="email-wrapper" style="max-width: 800px; margin: auto">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#8d8e90">
+            <tr>
+                <td>
+                    <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center">
+                        <tr>
+                            <td align="center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                    <tr>
+                                        <td width="10%">&nbsp;</td>
+                                        <td width="80%" align="left" valign="top">
+                                            <font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:24px">
+                                            </font>
+                                            <font style="font-family: Verdana, Geneva, sans-serif; color:#000; font-size:14px; line-height:21px">
+                                                <b>
+                                                    Hi <%= name %> ,
+                                                </b>
+                                            </font>
+                                        </td>
+                                        <td width="10%">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td width="10%">&nbsp;</td>
+                                        <td width="80%" align="left" valign="top">
+                                            <font style="font-family: Georgia, 'Times New Roman', Times, serif; color:#010101; font-size:24px">
+                                            </font>
+                                            <font style="font-family: Verdana, Geneva, sans-serif; color:#000; font-size:14px; line-height:21px">
+                                        <span>
+                                            <%= message %>
+                                        </span>
+                                            </font>
+                                        </td>
+                                        <td width="10%">&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="100%" align="center" valign="top" colspan="4" height="40px"
+                                style="background-color: #B2DFDB;">
+                                <font style="font-family: Verdana, Geneva, sans-serif; color:#000; font-size:14px; line-height:40px; ">
+                                    © 2015 SmartHumanoid All rights reserved.
+                                </font>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</center>
+<!--/Body content-->
+
+<!--Footer-->
+<%- include ../footer/footer.ejs %>
+<!-- /Footer-->
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "EXPIRES_IN" : 60 , 
+    "SECRET_KEY" : "EtU0USaA9KlVjnbWVQSjsR6r0eQdn7DMbGA3rVj8ijTHE9Dm8dS7i2dmP9KjQER",
+    "otp_exp_time": 60
+}
